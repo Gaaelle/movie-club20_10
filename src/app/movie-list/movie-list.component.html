@@ -1,3 +1,17 @@
-<p>
-  movie-list works!
-</p>
+<div class="container">
+  <div class="well">
+    <ul class="list-group jumbotron">
+      <li *ngFor="let movie of movies.movies" class="list-group-item">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>{{ movie.title }}</h3>
+            <p>{{ movie.description }}</p>
+          </div>
+          <div class="col-md-4">
+            <img [src]="movie.imageURL">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
