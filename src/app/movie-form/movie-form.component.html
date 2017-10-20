@@ -1,3 +1,7 @@
-<p>
-  movie-form works!
-</p>
+<div class="row">
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" class="form-group">
+      <input type="text" [(ngModel)]="name" required #userName="ngModel" class="form-control">
+      <button>Submit</button>
+    </form>
+</div>
+<!-- Essayer de faire un formulaire pour ajouter un film. (3 input, titre, desc, et img, img = string à ajouter au src) -->
